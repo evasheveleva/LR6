@@ -12,14 +12,13 @@
 
 ## 2. Установка Git
 Установила Гит
-## 2. Установка Git
-Был установлен Git
+
 
 ## 3. Изменение имени пользователя
 Команда для изменения имени пользователя:
 
 ```bash
-$ git config --global user.name "Группа 4317 Шевелёва Э.С."
+$ git config --global user.name "4317 Шевелёва Э.С."
 ```
 Команда для изменения почты пользователя:
 
@@ -56,7 +55,7 @@ $ git pull
 ## 7. Получение данных для каждой из веток
 
 ```bash
-$ git log --oneline --graph --all
+$ git log --all --oneline
 ```
 
 *Результат работы команды*
@@ -75,9 +74,9 @@ $ git log -1
 
 ```bash
 $ git checkout master
-$ git marge origin/branch1
+$ git merge origin/branch1
 ```
-Решение конфликта с помощью редактора nano путем замены содержимого mergefile.txt в ветке branch1
+Решение конфликта с помощью текстового редактора путем замены содержимого mergefile.txt в ветке branch1
 ![Решение](./pictures/6.jpg)
 
 
@@ -125,7 +124,37 @@ $ git checkout -b report
 $ git log --pretty=format:"%h %ad %an %s" --date=short
 ```
 
-## 15. История операций
+## 15. Логи команд
+
+```bash
+$ git config --global user.name "4317 Шевелёва Э.С."      (изменение имени)
+$ git config --global user.email "shevelva.evelina@gmail.com"    (изменение почты)
+$ git clone https://github.com/evasheveleva/LR6     (клонирование репозитория)
+$ git pull   (добавление изменений)
+$ git log --all --oneline    (получение данных)
+$ git log -1    (просмотр изменений)
+$ git checkout master
+$ git marge origin/branch1   (слияние веток)
+$ git push origin --delete branch1   (удаление ветки)
+$ echo "бж пыль" >> friends.txt   (создание текстового файла)
+$ git add friends.txt
+$ git commit -m "1 файл"
+$ echo "Twisted: The Untold Story of a Royal Vizier" >> musicals.txt
+$ git add musicals.txt
+$ git commit -m "2 файл"
+$ echo "Коряжма" >> town.txt
+$ git add town.txt
+$ git commit -m "3 файл"
+$ echo "+" >> 1.txt
+$ git add 1.txt
+$ git commit -m "4 файл"
+$ git push
+$ git reset --hard HEAD~1   (откат коммита)
+$ git checkout -b report   (создание ветки для отчёта)
+$ git log --pretty=format:"%h %ad %an %s" --date=short   (история операций)
+```
+
+## 16. История операций
 Список истории операций:
 
 + 80ba56d 2024-11-22 4317 Шевелёва Э.С. Добавление рисунков
